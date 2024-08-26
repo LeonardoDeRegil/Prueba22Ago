@@ -13,20 +13,43 @@ namespace Prueba22Ago
         {
             // Paso 0: Condición de Vacío
             if (textBox1.Text.Equals("") ||
-                textBox2.Text.Equals(""))
+                textBox2.Text.Equals("") || textBox3.Text.Equals("") ||
+                textBox4.Text.Equals(""))
             {
                 MessageBox.Show("Los números tienen que ser MAYOR que cero, NO VACÍOS");
                 return;
             }
             // Paso 1: Inicialización de parámetros
-            int totalValores = Convert.ToInt32(textBox1.Text);
-            int valorMuestra = Convert.ToInt32(textBox2.Text);
+            int a = Convert.ToInt32(textBox1.Text);
+            int c = Convert.ToInt32(textBox2.Text);
+            int m = Convert.ToInt32(textBox3.Text);
+            int x0 = Convert.ToInt32(textBox4.Text);
+
+            //Paso 1.2: Condiciones
+            if (a<=0 || c<=0 || x0 <=0)
+            {
+                MessageBox.Show("Valores a, c, x0, tienen que ser mayores que CERO");
+                return;
+            }
+
+            if (m<=x0 || m<=c || m<=a)
+            {
+                MessageBox.Show("El valor de m tiene que ser mayor que a, c y x0");
+                return;
+            }
 
             // Paso 2: Declarar clase algoritmo genético
             AlgoritmoSimulacion algoritmo = new AlgoritmoSimulacion();
 
+            if (algoritmo.ChecarPrimo(a) == false || algoritmo.ChecarPrimo(c) == false ||
+                algoritmo.ChecarPrimo(m) == false || algoritmo.ChecarPrimo(x0) == false)
+            {
+                MessageBox.Show("Valores a, c, x0 y m tienen que ser PRIMOS");
+                return;
+            }
+
             // Paso 3: Llamar método principal
-            List<int> listaEnteros = algoritmo.GenerarValores(totalValores);
+            List<int> listaEnteros = algoritmo.GeneradorCongruencial(a, c, m, x0);
 
             // Paso 4: Llenar el grid
             llenarGrid(listaEnteros);
