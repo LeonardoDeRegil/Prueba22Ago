@@ -10,7 +10,7 @@ namespace Prueba22Ago
         {
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new FormCongruencial());
+            Application.Run(new Menu());
         }
     }
 }

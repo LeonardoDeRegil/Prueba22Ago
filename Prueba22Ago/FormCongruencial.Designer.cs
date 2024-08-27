@@ -136,7 +136,7 @@
             label4.TabIndex = 11;
             label4.Text = "x0";
             // 
-            // Form1
+            // FormCongruencial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -152,8 +152,8 @@
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Controls.Add(button1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "FormCongruencial";
+            Text = "Congruencial";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

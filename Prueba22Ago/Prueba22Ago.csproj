@@ -20,4 +20,10 @@
     </COMReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="FormProductoMedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>
