@@ -9,7 +9,8 @@ namespace Prueba22Ago
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormCuadradoMedio());
+
+            Application.Run(new FormCongruencial());
         }
     }
 }
