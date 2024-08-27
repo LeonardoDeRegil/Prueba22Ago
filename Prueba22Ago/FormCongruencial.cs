@@ -2,9 +2,9 @@ using Prueba22Ago.Algoritmos;
 
 namespace Prueba22Ago
 {
-    public partial class Form1 : Form
+    public partial class FormCongruencial : Form
     {
-        public Form1()
+        public FormCongruencial()
         {
             InitializeComponent();
         }
@@ -39,7 +39,7 @@ namespace Prueba22Ago
             }
 
             // Paso 2: Declarar clase algoritmo genético
-            AlgoritmoSimulacion algoritmo = new AlgoritmoSimulacion();
+            AlgoritmoCongruencial algoritmo = new AlgoritmoCongruencial();
 
             if (algoritmo.ChecarPrimo(a) == false || algoritmo.ChecarPrimo(c) == false ||
                 algoritmo.ChecarPrimo(m) == false || algoritmo.ChecarPrimo(x0) == false)

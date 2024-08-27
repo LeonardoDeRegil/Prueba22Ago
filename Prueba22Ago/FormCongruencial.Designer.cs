@@ -1,6 +1,6 @@
 ﻿namespace Prueba22Ago
 {
-    partial class Form1
+    partial class FormCongruencial
     {
         /// <summary>
         ///  Required designer variable.

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Prueba22Ago.Algoritmos
 {
-    public class AlgoritmoSimulacion
+    public class AlgoritmoCongruencial
     {
-        public AlgoritmoSimulacion() { }
+        public AlgoritmoCongruencial() { }
         public List<int> GenerarValores(int n)
         { 
             List<int> listaSalida = new List<int>();
