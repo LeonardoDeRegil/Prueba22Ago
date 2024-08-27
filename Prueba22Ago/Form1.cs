@@ -1,4 +1,7 @@
 using Prueba22Ago.Algoritmos;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Prueba22Ago
 {
@@ -11,40 +14,46 @@ namespace Prueba22Ago
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Paso 0: CondiciÛn de VacÌo
-            if (textBox1.Text.Equals("") ||
-                textBox2.Text.Equals(""))
+            // Paso 0: Condici√≥n de Vac√≠o
+            if (textBox1.Text.Equals("") || textBox2.Text.Equals(""))
             {
-                MessageBox.Show("Los n˙meros tienen que ser MAYOR que cero, NO VACÕOS");
+                MessageBox.Show("Los n√∫meros semilla no pueden estar vac√≠os");
                 return;
             }
-            // Paso 1: InicializaciÛn de par·metros
-            int totalValores = Convert.ToInt32(textBox1.Text);
-            int valorMuestra = Convert.ToInt32(textBox2.Text);
 
-            // Paso 2: Declarar clase algoritmo genÈtico
+            // Paso 1: Inicializaci√≥n de par√°metros
+            int x0 = Convert.ToInt32(textBox1.Text);
+            int x1 = Convert.ToInt32(textBox2.Text);
+
+            // Paso 1.2: Condiciones
+            if (x0 <= 0 || x1 <= 0)
+            {
+                MessageBox.Show("Valores de x0 y x1 tienen que ser mayores que cero");
+                return;
+            }
+
+            // Paso 2: Declarar clase algoritmo
             AlgoritmoSimulacion algoritmo = new AlgoritmoSimulacion();
 
-            // Paso 3: Llamar mÈtodo principal
-            List<int> listaEnteros = algoritmo.GenerarValores(totalValores);
+            // Paso 3: Llamar m√©todo principal
+            List<int> listaEnteros = algoritmo.GeneradorProductoMedio(100, x0, x1); // Aqu√≠ se genera una lista de 100 n√∫meros
 
             // Paso 4: Llenar el grid
             llenarGrid(listaEnteros);
-
         }
 
         public void llenarGrid(List<int> lista)
         {
-            // Paso 0: Indicas el n˙mero de columnas
+            // Paso 0: Indicar el n√∫mero de columnas
             string numeroColumna1 = "1";
             string numeroColumna2 = "2";
 
-            // Paso 1: Determinas la cantidad de columnas
+            // Paso 1: Determinar la cantidad de columnas
             dataGridView1.Columns.Clear();
             dataGridView1.Columns.Add(numeroColumna1, "Id");
             dataGridView1.Columns.Add(numeroColumna2, "Valor");
 
-            // Paso 2: Recorres el grid para cada fila llenas los valores aleatorios
+            // Paso 2: Recorrer el grid para cada fila y llenar los valores aleatorios
             for (int i = 0; i < lista.Count; i++)
             {
                 dataGridView1.Rows.Add();
@@ -60,14 +69,14 @@ namespace Prueba22Ago
             exportarExcel.Application.Workbooks.Add(true);
             int indiceColumna = 0;
 
-            // Paso 1: Construyes columnas y los nombres de las "cabeceras"
+            // Paso 1: Construir columnas y los nombres de las "cabeceras"
             foreach (DataGridViewColumn columna in data.Columns)
             {
                 indiceColumna++;
                 exportarExcel.Cells[1, indiceColumna] = columna.HeaderText;
             }
 
-            // Paso 2: Construyes filas y llenas valores
+            // Paso 2: Construir filas y llenar valores
             int indiceFilas = 0;
 
             foreach (DataGridViewRow fila in data.Rows)
@@ -88,17 +97,14 @@ namespace Prueba22Ago
         private void button2_Click(object sender, EventArgs e)
         {
             DescargaExcel(dataGridView1);
-
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
     }
 }

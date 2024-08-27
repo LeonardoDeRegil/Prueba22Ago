@@ -40,7 +40,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(609, 86);
+            button1.Location = new Point(100, 279);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -51,48 +51,48 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(195, 87);
+            label1.Location = new Point(32, 30);
             label1.Name = "label1";
-            label1.Size = new Size(71, 15);
+            label1.Size = new Size(23, 15);
             label1.TabIndex = 2;
-            label1.Text = "Parametro 1";
+            label1.Text = "x0:";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(330, 184);
+            dataGridView1.Location = new Point(218, 24);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.Size = new Size(554, 278);
             dataGridView1.TabIndex = 3;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(195, 133);
+            label2.Location = new Point(32, 73);
             label2.Name = "label2";
-            label2.Size = new Size(71, 15);
+            label2.Size = new Size(23, 15);
             label2.TabIndex = 5;
-            label2.Text = "Parametro 2";
+            label2.Text = "x1:";
             label2.Click += label2_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(330, 84);
+            textBox1.Location = new Point(75, 24);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(330, 130);
+            textBox2.Location = new Point(75, 70);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 7;
             // 
             // button2
             // 
-            button2.Location = new Point(609, 184);
+            button2.Location = new Point(697, 361);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 8;
@@ -105,13 +105,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Controls.Add(button1);
+            Controls.Add(button2);
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
