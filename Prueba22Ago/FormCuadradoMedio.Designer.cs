@@ -1,6 +1,6 @@
 ﻿namespace Prueba22Ago
 {
-    partial class Form1
+    partial class FormCuadradoMedio
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnEjecutar = new Button();
             label1 = new Label();
             dataGridView1 = new DataGridView();
             textBox1 = new TextBox();
@@ -36,15 +36,15 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnEjecutar
             // 
-            button1.Location = new Point(125, 72);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Ejecutar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnEjecutar.Location = new Point(125, 72);
+            btnEjecutar.Name = "btnEjecutar";
+            btnEjecutar.Size = new Size(75, 23);
+            btnEjecutar.TabIndex = 0;
+            btnEjecutar.Text = "Ejecutar";
+            btnEjecutar.UseVisualStyleBackColor = true;
+            btnEjecutar.Click += btnEjecutar_Click;
             // 
             // label1
             // 
@@ -82,7 +82,7 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // Form1
+            // FormCuadradoMedio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -91,9 +91,9 @@
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
-            Controls.Add(button1);
-            Name = "Form1";
-            Text = "Form1";
+            Controls.Add(btnEjecutar);
+            Name = "FormCuadradoMedio";
+            Text = "CuadradoMedio";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -101,7 +101,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnEjecutar;
         private Label label1;
         private DataGridView dataGridView1;
         private TextBox textBox1;
