@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prueba22Ago.Algoritmos
 {
-    public class AlgoritmoCuadradoMedio
+    public class AlgoritmoProductoMedio
     {
         public int ObtieneMRn2(int a)
         {
@@ -77,15 +77,16 @@ namespace Prueba22Ago.Algoritmos
             return listaSalida;
         }
 
-        public List<int> GeneradorCuadradoMedio(int inputN)
+        public List<int> GeneradorProductoMedio(int inputN, int inputN1)
         {
             List<int> listaSalida = new List<int>();
             bool continua = true;
             int n = 0;
             int Rn = inputN;
+            int Rn1 = inputN1;
             while (continua)
             {
-                int Rn2 = (int)Math.Pow(Rn, 2);
+                int Rn2 = Rn * Rn1;
                 int MRn2 = ObtieneMRn2(Rn2);
 
                 List<int> val1y2 = ObtieneVal1y2(MRn2);
@@ -98,7 +99,8 @@ namespace Prueba22Ago.Algoritmos
 
                 n = +1;
 
-                Rn = val1;
+                Rn = Rn1;
+                Rn1 = val1;
             }
 
             return listaSalida;
