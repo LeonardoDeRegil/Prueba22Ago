@@ -12,9 +12,7 @@ namespace Prueba22Ago
         private void button1_Click(object sender, EventArgs e)
         {
             // Paso 0: Condición de Vacío
-            if (textBox1.Text.Equals("") ||
-                textBox2.Text.Equals("") || textBox3.Text.Equals("") ||
-                textBox4.Text.Equals(""))
+            if (textBox1.Text.Equals(""))
             {
                 MessageBox.Show("Los números tienen que ser MAYOR que cero, NO VACÍOS");
                 return;
@@ -26,13 +24,13 @@ namespace Prueba22Ago
             int x0 = Convert.ToInt32(textBox4.Text);
 
             //Paso 1.2: Condiciones
-            if (a<=0 || c<=0 || x0 <=0)
+            if (a <= 0 || c <= 0 || x0 <= 0)
             {
                 MessageBox.Show("Valores a, c, x0, tienen que ser mayores que CERO");
                 return;
             }
 
-            if (m<=x0 || m<=c || m<=a)
+            if (m <= x0 || m <= c || m <= a)
             {
                 MessageBox.Show("El valor de m tiene que ser mayor que a, c y x0");
                 return;
@@ -120,6 +118,11 @@ namespace Prueba22Ago
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
